@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Your Wish - Make Her Smile!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ff9a9e, #fecfef);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            color: #ff4081;
+            font-size: 2.5em;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background: #e91e63;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌟 State Your Wish! 🌟</h1>
+    <p>Choose a fun treat or share your own wish. Let's make you smile! 😊</p>
+    
+    <form id="wishForm" action="page3.html" method="get">
+        <p>What do you want:</p>
+        <input type="radio" id="chocolate" name="treat" value="Ferrero Rocher chocolate" required>
+        <label for="chocolate">Ferrero Rocher chocolate 🍫</label><br>
+        <input type="radio" id="waffle" name="treat" value="waffle">
+        <label for="waffle">Waffle 🧇</label><br>
+        <label for="me">or Me😁</label><br>
+        
+        <textarea id="customWish" name="customWish" placeholder="Or share your own wish here!" rows="3"></textarea>
+        <button type="submit">Submit Wish</button>
+    </form>
+</body>
+</html>

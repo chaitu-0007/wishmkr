@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Wish & Message - Make Her Smile!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ff9a9e, #fecfef);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            color: #ff4081;
+            font-size: 2.5em;
+        }
+        #output {
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            font-size: 1.2em;
+        }
+        .emoji {
+            font-size: 2em;
+        }
+        .surprise {
+            margin-top: 20px;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        button {
+            background: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #e91e63;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌟 Your Wish & A Little Note 🌟</h1>
+    
+    <div id="output">
+        <p id="wishDisplay"></p>
+        <p>you ligth up my world ,you might have many memories with other people and i to has some memories but in every single memory you are with me as a notification , your good morning text lights up my day its like a sunrise for me and your good night text ends my day my life , you weer with me in every single minute with me every single moment you made my bad a good one and made my year a delightful one in this 2025 you made me cry ,laugh ,worry ,jealous and we fought for smaller things we may not meet regulary but we still stayed close all these 4 yrs and always tried to be at my side , endured all my stupid stuff , always understood me , and never tried to give up on me <br><b>WE ARE ENDING THIS 2025 TOGETHER AND STARTING 2026 TOGETHER LETS ALSO END 2026 TOGETHER AND NO MATTER HOW MANY FIGHTS HAPPEN BETWEEN US LETS SOLVE THEM AND STAY TOGETHER FOREVER NO MATTER HOW MANY PEOPLE COME AND GO LETS US NOT GIVE UP ON EACH OTHER TILL THE END FOR SOME OTHER PEOPLE <br>neeku em aiyyna kavali antey insta lo nannu adugu 😂😂</b> 💖</p>
+        <p id="compliment"></p>
+    </div>
+    
+    <button id="surpriseBtn">Click for a Surprise! 🎉</button>
+    <div id="surprise" class="surprise" style="display:none;"></div>
+    
+    <script>
+        const compliments = [
+            "you make my life easier 💖",
+            "Your smile makes my world brighter! 😍",
+            "You're the best! 🌈",
+            "Wishing you all the happiness! 🎂",
+            "No matter what im never leaving you alone ⭐"
+        ];
+        
+        const surprises = [
+            "in 2026 lets go where ever you want  🤗",
+            "lets spend more time together 🐶❤️",
+            "next year let us take many photos  🎁",
+            "lets go to more movies",
+            "moreover let us try to stay so close and lets spend more time and make lots and lots of memories ✨"
+        ];
+        
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const treat = urlParams.get('treat');
+        const customWish = urlParams.get('customWish');
+        
+        const wishDisplay = document.getElementById('wishDisplay');
+        if (customWish) {
+            wishDisplay.innerHTML = `Your wish: "${customWish}" ❤️`;
+        } else if (treat) {
+            wishDisplay.innerHTML = `Your chosen treat: ${treat} 🍫🧇`;
+        } else {
+            wishDisplay.innerHTML = "alright these are the things i want to tell 😊";
+        }
+        
+        document.getElementById('compliment').innerHTML = compliments[Math.floor(Math.random() * compliments.length)];
+        
+        document.getElementById('surpriseBtn').addEventListener('click', function() {
+            const surpriseDiv = document.getElementById('surprise');
+            surpriseDiv.innerHTML = `<p class="emoji">${surprises[Math.floor(Math.random() * surprises.length)]}</p>`;
+            surpriseDiv.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
